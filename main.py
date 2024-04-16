@@ -19,13 +19,13 @@ print('''
 
     ''')
 
-print('Welcome to Access Sheild, a commandline tool built for penetration testers.')
+print('Welcome to Access Shield, a commandline tool built for penetration testers.')
 print('======================================================================')
 
 print('For best results run this script as sudo or a binary/service with high level permissions.')
 print('\n')
 
-print('Access Sheild Console:')
+print('Access Shield Console:')
 print('For list of commands type help')
 
 while True:
@@ -42,7 +42,7 @@ while True:
     Neutral Commands
     ----------------------------------------------
     help - shows available commands and their uses
-    exit - will exit out of the Access Sheild Console
+    exit - will exit out of the Access Shield Console
     hax0r - give you encouraging thoughts!
     ==============================================
 
